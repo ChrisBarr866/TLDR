@@ -10,7 +10,7 @@
 *obj/
 vscode/
 *appsettings.json/
-credentials.json/
+credentials.json
 
 
 # Local History for Visual Studio Code
