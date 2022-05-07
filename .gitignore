@@ -9,7 +9,7 @@
 *bin/
 *obj/
 vscode/
-*appsettings.json/
+appsettings.json
 credentials.json
 
 
