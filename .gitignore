@@ -9,6 +9,7 @@
 *bin/
 *obj/
 vscode/
+*appsettings.json/
 
 
 # Local History for Visual Studio Code
