@@ -15,29 +15,30 @@
     }
 }
 
+
 ReadEnvFile(".env");
-var table = new Table()
-        .Centered()
-        .HeavyBorder()
-        .BorderColor(Color.Blue);
+// var table = new Table()
+//         .Centered()
+//         .HeavyBorder()
+//         .BorderColor(Color.Blue);
 
-    await AnsiConsole.Live(table).StartAsync(async ctx => {
-        var client = new HttpClient();
-        // access microsoft cognitive services speech api
-        var result = await client.GetStringAsync("https://westus.api.cognitive.microsoft.com/sts/v1.0/issueToken");
-        var token = result.Trim();
+    // await AnsiConsole.Live(table).StartAsync(async ctx => {
+    //     var client = new HttpClient();
+    //     // access microsoft cognitive services speech api
+    //     var result = await client.GetStringAsync("https://westus.api.cognitive.microsoft.com/sts/v1.0/issueToken");
+    //     var token = result.Trim();
 
-        try {
-            var response = await client.GetAsync("");
-            var content = response.Content.ReadAsStringAsync().Result;
+    //     try {
+    //         var response = await client.GetAsync("");
+    //         var content = response.Content.ReadAsStringAsync().Result;
 
-            table.AddColumn(new TableColumn("[magenta on green]Title[/]").Centered())
-                 .AddRow($"{content}");
-        } catch (HttpRequestException e) {
-            AnsiConsole.Markup($"[red bold]Error ✗: {e}[/]");
-        }
+    //         table.AddColumn(new TableColumn("[magenta on green]Title[/]").Centered())
+    //              .AddRow($"{content}");
+    //     } catch (HttpRequestException e) {
+    //         AnsiConsole.Markup($"[red bold]Error ✗: {e}[/]");
+    //     }
 
-        ctx.Refresh();
-        await Task.Delay(1000);
-    }
-                );
+    //     ctx.Refresh();
+    //     await Task.Delay(1000);
+    // }
+    //             );
